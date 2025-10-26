@@ -1,0 +1,54 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JavaScript Output Methods</title>
+</head>
+<body>
+
+  <h2>JavaScript Output Examples</h2>
+
+  <p id="demo">Output shown here using innerHTML:</p>
+
+  <button onclick="showOutputs()">Click to Show All Types of Outputs</button>
+
+  <script>
+    function showOutputs() {
+      // 1. innerHTML - display output inside HTML elements
+      document.getElementById("demo").innerHTML = "1. Displayed using innerHTML (inside this paragraph).";
+
+      // 2. document.write() - writes directly to the document
+      document.write("<br>2. Displayed using document.write() (Note: this will replace the entire document if used after loading).");
+
+      // 3. window.alert() - displays an alert box
+      alert("3. Displayed using alert() method - Hello from JavaScript!");
+
+      // 4. console.log() - prints output in browser console (use F12 → Console)
+      console.log("4. This message is shown in Console using console.log()");
+
+      // 5. window.print() - opens the browser print dialog
+      window.print();
+    }
+  </script>
+
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>JS Output Methods</title>
+</head>
+<body>
+<h2 id="output"></h2>
+<script>
+alert("This is an alert box!");
+document.write("<p>This is displayed using document.write</p>");
+console.log("This is a console log message"); 
+document.getElementById("output").innerHTML = "This is displayed using innerHTML.";
+</script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>CSS Styles Example</title>
+  
+  <!-- Internal CSS Styles -->
+  <style>
+    /* Internal style: Selector = p.internal-text */
+    p.internal-text {
+      color: green;       /* Property: color, Value: green */
+      font-size: 16px;    /* Property: font-size, Value: 16px */
+    }
+
+    /* Another internal style */
+    #internal-id {
+      background-color: lightyellow;   /* Property: background-color, Value: lightyellow */
+      padding: 10px;                   /* Property: padding, Value: 10px */
+    }
+  </style>
+  
+  <!-- External CSS -->
+  <link rel="stylesheet" href="external.css" />
+</head>
+<body>
+
+  <!-- Inline CSS style: only for this h1 element -->
+  <h1 style="color: blue; text-align: center;">This is a heading (Inline style)</h1>
+
+  <!-- Paragraph with internal style applied via class -->
+  <p class="internal-text">This paragraph uses internal CSS styling.</p>
+
+  <!-- div with internal style applied via ID -->
+  <div id="internal-id">This div uses internal CSS styling by ID.</div>
+
+  <!-- Paragraph styled by external CSS -->
+  <p class="external-text">This paragraph is styled by external CSS.</p>
+
+</body>
+</html>

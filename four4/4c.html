@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-class Selector Example</title>
+  <style>
+    /* :hover - changes style when the user hovers over the element */
+    button:hover {
+      background-color: lightgreen;
+      color: darkgreen;
+      cursor: pointer;
+    }
+
+    /* :focus - applied when an element gets focus (e.g., a text field is clicked) */
+    input:focus {
+      border: 2px solid blue;
+      outline: none;
+      background-color: #f0f8ff;
+    }
+
+    /* :first-child - styles the first list item */
+    li:first-child {
+      font-weight: bold;
+      color: brown;
+    }
+
+    /* :nth-child - styles specific indexed items */
+    li:nth-child(2) {
+      color: purple;
+    }
+
+    /* :visited and :active - modify link states */
+    a:visited {
+      color: gray;
+    }
+
+    a:active {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS Pseudo-class Selector Demo</h2>
+
+  <a href="https://www.example.com" target="_blank">Visit Example Website</a>
+  <br><br>
+
+  <input type="text" placeholder="Click or focus this input field">
+
+  <br><br>
+  
+  <button>Hover over me</button>
+
+  <h3>List Example:</h3>
+  <ul>
+    <li>First list item (first-child)</li>
+    <li>Second list item (nth-child)</li>
+    <li>Third list item</li>
+  </ul>
+</body>
+</html>

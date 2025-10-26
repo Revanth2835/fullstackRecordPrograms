@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+<form onsubmit="return validateForm()">
+  Name: <input type="text" id="name"><br>
+  Age: <input type="number" id="age"><br>
+  Email: <input type="text" id="email"><br>
+  <input type="submit" value="Submit">
+</form>
+<div id="msg"></div>
+
+<script>
+function validateForm(){
+  var name = document.getElementById("name").value;
+  var age = document.getElementById("age").value;
+  var email = document.getElementById("email").value;
+
+  // Name: must start with alphabet, only alphanumeric allowed
+  if(!/^[a-zA-Z][a-zA-Z0-9]*$/.test(name)){
+    alert("Invalid Name: should start with an alphabet and contain only alphanumeric characters.");
+    return false;
+  }
+  // Age: must be between 1 and 100
+  if(age < 1 || age > 100){
+    alert("Invalid Age: should be between 1 and 100.");
+    return false;
+  }
+  // Email: basic email validation
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ 
+    alert("Invalid Email format.");
+    return false;
+  }
+  document.getElementById("msg").innerHTML = "Form Submitted Successfully!";
+  return true;
+}
+</script>
+</body>
+</html>
+ 

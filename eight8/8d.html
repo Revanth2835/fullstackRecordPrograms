@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Object Iteration Example</title>
+</head>
+<body>
+  <h2>JavaScript Object Iteration</h2>
+  <p id="output"></p>
+
+  <script>
+    // Define an object
+    let student = {
+      name: "Rahul",
+      age: 21,
+      course: "B.Tech",
+      branch: "CSE"
+    };
+
+    let result = "";
+
+    // Using for-in loop (iterates over all keys)
+    result += "<b>Using for-in loop:</b><br>";
+    for (let key in student) {
+      result += key + " : " + student[key] + "<br>";
+    }
+
+    // Using forEach loop on Object.keys()
+    result += "<br><b>Using forEach loop:</b><br>";
+    Object.keys(student).forEach(function(key) {
+      result += key + " : " + student[key] + "<br>";
+    });
+
+    // Using for-of loop on Object.values()
+    result += "<br><b>Using for-of loop:</b><br>";
+    for (let value of Object.values(student)) {
+      result += value + "<br>";
+    }
+
+    document.getElementById("output").innerHTML = result;
+  </script>
+</body>
+</html>

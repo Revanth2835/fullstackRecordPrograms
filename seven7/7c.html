@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Array Object Example</title>
+  <script>
+    function arrayDemo() {
+      var fruits = ["Apple", "Banana", "Mango"];
+      // Adding a new element to the array
+      fruits.push("Orange");
+
+      // Display array elements joined by commas
+      document.write("Fruits: " + fruits.join(", ") + "<br>");
+
+      // Display the total number of elements in the array
+      document.write("Total Fruits: " + fruits.length + "<br>");
+
+      // Removing last element and display it
+      var removed = fruits.pop();
+      document.write("Removed fruit: " + removed + "<br>");
+
+      // Show remaining fruits after pop
+      document.write("Remaining fruits: " + fruits.join(", ") + "<br>");
+
+      // Find index of a fruit
+      var index = fruits.indexOf("Banana");
+      document.write("Index of Banana: " + index);
+    }
+  </script>
+</head>
+<body onload="arrayDemo()">
+</body>
+</html>

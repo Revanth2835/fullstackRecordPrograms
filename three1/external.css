@@ -1,0 +1,6 @@
+/* External style: Selector = p.external-text */
+p.external-text {
+  color: red;         /* Property: color, Value: red */
+  font-weight: bold;  /* Property: font-weight, Value: bold */
+  font-size: 18px;    /* Property: font-size, Value: 18px */
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+  <script>
+    function regexDemo() {
+      var pattern = /JavaScript/i; // Case-insensitive regex
+      var text = "I am learning JavaScript";
+
+      // test() returns true if pattern matches
+      document.write("Match found (test): " + pattern.test(text) + "<br>");
+
+      // exec() returns matched text and details or null if no match
+      var result = pattern.exec(text);
+      if (result) {
+        document.write("Match found (exec): " + result[0] + "<br>");
+        document.write("Pattern source: " + pattern.source + "<br>");
+        document.write("Index of match: " + result.index + "<br>");
+        document.write("Input string: " + result.input + "<br>");
+      } else {
+        document.write("No match found (exec)<br>");
+      }
+    }
+  </script>
+</head>
+<body onload="regexDemo()">
+</body>
+</html>

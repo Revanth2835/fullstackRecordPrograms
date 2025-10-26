@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Window Object Example</title>
+  <script>
+    function showWindowDetails() {
+      // Alert window size
+      alert("Window Height: " + window.innerHeight + "\nWindow Width: " + window.innerWidth);
+      
+      // Log location URL
+      console.log("Current URL:", window.location.href);
+      
+      // Open a new window
+      // window.open("https://www.example.com");  // Uncomment to test opening
+      
+      // Print the page
+      // window.print();  // Uncomment to test printing
+    }
+
+    function resizeWindow() {
+      // Resize window to 800x600 pixels
+      window.resizeTo(800, 600);
+      alert("Window resized to 800x600");
+    }
+  </script>
+</head>
+<body onload="showWindowDetails()">
+
+  <h2>Window Object Demo</h2>
+  <button onclick="resizeWindow()">Resize Window</button>
+
+  <p>Open browser console to see location URL logged.</p>
+
+</body>
+</html>

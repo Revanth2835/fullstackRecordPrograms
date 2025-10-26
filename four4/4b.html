@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Combinator Selectors Example</title>
+  <style>
+    /* Descendant selector: styles all <span> inside any <div> */
+    div span {
+      color: blue;
+      font-weight: bold;
+    }
+    /* Child selector: styles <li> that are direct children of <ul> */
+    ul > li {
+      background: #e0f7fa;
+    }
+    /* Adjacent sibling selector: styles <p> immediately after <h2> */
+    h2 + p {
+      color: orange;
+      font-style: italic;
+    }
+    /* General sibling selector: styles all <p> siblings after <h3> */
+    h3 ~ p {
+      color: seagreen;
+      border-left: 3px solid #388e3c;
+      padding-left: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div>
+    <span>This span is a descendant of div (descendant selector).</span>
+    <p>
+      <span>Another span inside a p inside div (descendant selector).</span>
+    </p>
+  </div>
+  <span>This span is outside div (won't be selected).</span>
+  
+  <ul>
+    <li>Direct child li of ul (child selector)</li>
+    <li>Another direct child li of ul</li>
+    <div>
+      <li>This li is not a direct child (won't be selected)</li>
+    </div>
+  </ul>
+  
+  <h2>Adjacent Sibling Demo</h2>
+  <p>This p is immediately after h2 (adjacent sibling selector).</p>
+  <p>This p is not immediately after h2 (not selected).</p>
+  
+  <h3>General Sibling Demo</h3>
+  <p>This p comes after h3 (general sibling selector).</p>
+  <p>Another p after h3 (general sibling selector).</p>
+</body>
+</html>

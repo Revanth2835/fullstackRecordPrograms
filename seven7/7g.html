@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+  <script>
+    function dateDemo() {
+      var today = new Date();
+
+      // Get day of the month (1-31)
+      document.write("Date: " + today.getDate() + "<br>");
+
+      // Get month (0-11), so add 1 to get 1-12
+      document.write("Month: " + (today.getMonth() + 1) + "<br>");
+
+      // Get the full year (4-digit year)
+      document.write("Year: " + today.getFullYear() + "<br>");
+
+      // Additional examples:
+      document.write("Hours: " + today.getHours() + "<br>");
+      document.write("Minutes: " + today.getMinutes() + "<br>");
+      document.write("Seconds: " + today.getSeconds() + "<br>");
+      document.write("Milliseconds: " + today.getMilliseconds() + "<br>");
+
+      // Day of the week (0=Sunday, 1=Monday, ... 6=Saturday)
+      document.write("Day of the week: " + today.getDay() + "<br>");
+    }
+  </script>
+</head>
+<body onload="dateDemo()">
+</body>
+</html>

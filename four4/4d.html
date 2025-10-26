@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pseudo-element Selector Example</title>
+  <style>
+    /* ::first-letter - Styles the first letter of every paragraph */
+    p::first-letter {
+      font-size: 2em;
+      color: red;
+      font-weight: bold;
+    }
+
+    /* ::first-line - Styles the first line of text in paragraphs */
+    p::first-line {
+      color: blue;
+      text-transform: uppercase;
+    }
+
+    /* ::before - Adds content before a heading */
+    h2::before {
+      content: "★ ";
+      color: gold;
+    }
+
+    /* ::after - Adds content after a heading */
+    h2::after {
+      content: " ★";
+      color: gold;
+    }
+
+    /* ::selection - Styles highlighted text */
+    ::selection {
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <h2>Pseudo-element Selector Demo</h2>
+  <p>
+    Pseudo-elements allow you to style specific parts of an element. For example, you can change the color of the first letter or create generated content before and after elements.
+  </p>
+  <p>
+    These elements help improve design without adding extra HTML tags, making web pages cleaner and more efficient.
+  </p>
+</body>
+</html>

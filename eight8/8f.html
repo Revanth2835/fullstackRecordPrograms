@@ -1,0 +1,11 @@
+    <html>
+<body>
+<script>
+var amount = parseInt(prompt("Enter amount:")); var denoms = [100,50,20,10,5,2,1];
+for(var i=0;i<denoms.length;i++){
+var count = parseInt(amount/denoms[i]);
+if(count>0) document.write(denoms[i] + "'s: " + count + "<br>"); amount %= denoms[i];
+}
+</script>
+</body>
+</html>  

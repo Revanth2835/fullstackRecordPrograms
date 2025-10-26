@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>All Types of CSS Selectors</title>
+  <style>
+    /* ---------------- SIMPLE SELECTORS ---------------- */
+    h1 { color: blue; }                     /* Element selector */
+    #unique { background-color: #f9e79f; }  /* ID selector */
+    .highlight { color: red; }              /* Class selector */
+    h2, p { font-family: Arial; }           /* Group selector */
+    * { margin-bottom: 10px; }              /* Universal selector */
+
+    /* ---------------- COMBINATOR SELECTORS ---------------- */
+    .descendant-demo p { color: green; }            /* Descendant */
+    ul > li { background: #e0f7fa; }               /* Child */
+    h3 + p { font-weight: bold; color: orange; }    /* Adjacent Sibling */
+    h4 ~ p { color: purple; }                      /* General Sibling */
+
+    /* ---------------- PSEUDO-CLASS SELECTORS ---------------- */
+    a:hover { color: darkred; }
+    input:focus { border: 2px solid blue; background-color: #eaf2f8; }
+    li:first-child { font-weight: bold; color: brown; }
+    li:nth-child(2) { color: teal; }
+
+    /* ---------------- PSEUDO-ELEMENT SELECTORS ---------------- */
+    p::first-letter { font-size: 2em; color: red; }
+    p::first-line { text-transform: uppercase; color: blue; }
+    h5::before { content: "★ "; color: gold; }
+    h5::after { content: " ★"; color: gold; }
+w
+    /* ---------------- ATTRIBUTE SELECTORS ---------------- */
+    [title] { color: darkblue; }
+    [type="text"] { background-color: #f6fff6; border: 2px solid green; }
+    [href^="https"] { color: seagreen; } 
+    [href*="learn"] { font-style: italic; }
+    [src$=".png"] { border: 2px solid purple; width: 80px; }
+  </style>
+</head>
+<body>
+  <h1 id="unique">All Types of CSS Selectors</h1>
+
+  <!-- Simple Selectors -->
+  <section>
+    <h2>1. Simple Selectors</h2>
+    <p class="highlight">This paragraph uses a class selector.</p>
+    <p>Element selector and group selector examples apply here.</p>
+  </section>
+
+  <!-- Combinator Selectors -->
+  <section class="descendant-demo">
+    <h2>2. Combinator Selectors</h2>
+    <div>
+      <p>This is inside a div (descendant selector).</p>
+    </div>
+    <ul>
+      <li>First list item (child selector)</li>
+      <li>Second list item (child selector)</li>
+    </ul>
+    <h3>Adjacent Sibling Example</h3>
+    <p>This paragraph is immediately after h3 (adjacent sibling).</p>
+    <h4>General Sibling Example</h4>
+    <p>This paragraph is a general sibling of h4.</p>
+  </section>
+
+  <!-- Pseudo-Class Selectors -->
+  <section>
+    <h2>3. Pseudo-Class Selectors</h2>
+    <a href="https://www.example.com">Hover over this link</a><br><br>
+    <input type="text" placeholder="Click here to focus">
+    <ul>
+      <li>First (first-child)</li>
+      <li>Second (nth-child)</li>
+      <li>Third</li>
+    </ul>
+  </section>
+
+  <!-- Pseudo-Element Selectors -->
+  <section>
+    <h2>4. Pseudo-Element Selectors</h2>
+    <h5>Pseudo-elements add content visually</h5>
+    <p>
+      Pseudo-elements let you style parts of an element like the first letter,
+      first line, or even generate new content using ::before and ::after.
+    </p>
+  </section>
+
+  <!-- Attribute Selectors -->
+  <section>
+    <h2>5. Attribute Selectors</h2>
+    <p title="CSS demo">This paragraph has a title attribute.</p>
+    <input type="text" placeholder="Text input field">
+    <a href="https://learn-html.com">Learn HTML (contains 'learn')</a><br><br>
+    <img src="./mine.jpg" width="100px" height="100px" alt="demo image">
+  </section>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Simple CSS Selectors Example</title>
+  <style>
+    /* Element Selector */
+    h1 {
+      color: blue;
+    }
+    /* ID Selector */
+    #unique {
+      background-color: #f8d7da;
+    }
+    /* Class Selector */
+    .important {
+      font-size: 1.3em;
+      color: seagreen;
+    }
+    /* Group Selector */
+    h2, p.grouped {
+      text-align: center;
+      font-family: Arial, sans-serif;
+    }
+    /* Universal Selector */
+    * {
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Element Selector</h1>
+  <p id="unique">This paragraph is styled by the ID selector.</p>
+  <p class="important">This paragraph is styled by the class selector.</p>
+  <h2>Group Selector (h2 & group class)</h2>
+  <p class="grouped">This paragraph is styled by the group selector.</p>
+  <p>This paragraph has margin by universal selector.</p>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Attribute Selector Example</title>
+  <style>
+    /* [attribute] - selects elements that have a specific attribute */
+    [title] {
+      color: darkblue;
+      font-weight: bold;
+    }
+
+    /* [attribute=value] - selects elements with an exact attribute value */
+    [type="text"] {
+      border: 2px solid green;
+      background-color: #f6fff6;
+    }
+
+    /* [attribute~=value] - selects elements with a specific word in a space-separated attribute value */
+    [title~="flower"] {
+      border: 2px solid orange;
+    }
+
+    /* [attribute^=value] - selects elements whose attribute value starts with the given text */
+    [href^="https"] {
+      color: green;
+    }
+
+    /* [attribute$=value] - selects elements whose attribute value ends with the given text */
+    [src$=".png"] {
+      border: 3px solid purple;
+      width: 80px;
+    }
+
+    /* [attribute*=value] - selects elements whose attribute value contains the given text anywhere */
+    [href*="learn"] {
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h2 title="flower garden">Attribute Selector Demo</h2>
+
+  <p title="flower beautiful">This paragraph has a title attribute containing the word "flower".</p>
+
+  <input type="text" placeholder="Enter your name">
+  <input type="password" placeholder="Enter password">
+
+  <br><br>
+  <a href="https://example.com">Visit Secure Site</a>
+  <br><br>
+  <a href="https://learn-html.com">Learn HTML</a>
+
+  <br><br>
+  <img src="demo.png" alt="sample image">
+  <img src="photo.jpg" alt="another image">
+</body>
+</html>
