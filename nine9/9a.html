@@ -1,20 +1,32 @@
 <html>
 <body>
 <script>
-function factorial(n){ if(n==0) return 1; return n*factorial(n-1);
+function factorial(n){ if(n==0) return 1; 
+    return n*factorial(n-1);
 }
 function fibonacci(n){
 var a=0,b=1,series=[a,b];
-for(var i=2;i<n;i++){ series.push(a+ b); a=b; b=series[i]; } return series;
+for(var i=2;i<n;i++){ 
+    series.push(a+ b); 
+    a=b; 
+     b=series[i];
+ } 
+ return series;
 }
 function isPrime(n){ if(n<2) return false;
-for(var i=2;i<=Math.sqrt(n);i++){ if(n%i==0) return false; } return true;
+for(var i=2;i<=Math.sqrt(n);i++){ 
+    if(n%i==0) return false;
+ } 
+ return true;
 }
 function isPalindrome(str){
 return str==str.split('').reverse().join('');
 }
 
-document.write("Factorial(5): "+factorial(5)+"<br>"); document.write("Fibonacci(5): "+fibonacci(5)+"<br>"); document.write("Prime check(7): "+isPrime(7)+"<br>"); document.write("Palindrome(madam): "+isPalindrome('madam'));
+document.write("Factorial(5): "+factorial(10)+"<br>");
+ document.write("Fibonacci(5): "+fibonacci(10)+"<br>");
+  document.write("Prime check(7): "+isPrime(10)+"<br>");
+   document.write("Palindrome(madam): "+isPalindrome('madam'));
 </script>
 </body>
 </html>

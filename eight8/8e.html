@@ -1,11 +1,15 @@
 <html>
 <body>
 <script>
-var num = parseInt(prompt("Enter a number:")); var temp = num, sum = 0;
+var num = parseInt(prompt("Enter a number:"));
+ var temp = num,
+  sum = 0;
 
-var digits = num.toString().length; while(temp > 0) {
+var digits = num.toString().length;
+ while(temp > 0) {
 var rem = temp % 10;
-sum += Math.pow(rem, digits); temp = parseInt(temp/10);
+sum += Math.pow(rem, digits); 
+ temp = parseInt(temp/10);
 }
 if(sum == num) document.write(num + " is an Armstrong Number"); else document.write(num + " is NOT an Armstrong Number");
 </script>

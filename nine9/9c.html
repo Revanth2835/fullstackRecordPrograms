@@ -16,11 +16,11 @@ function validateForm(){
   var email = document.getElementById("email").value;
 
   // Name: must start with alphabet, only alphanumeric allowed
-  if(!/^[a-zA-Z][a-zA-Z0-9]*$/.test(name)){
+  if(!/^[a-zA-Z][a-zA-Z0-9]*$/.test(name)){ 
     alert("Invalid Name: should start with an alphabet and contain only alphanumeric characters.");
     return false;
   }
-  // Age: must be between 1 and 100
+  // Age: must be between 1 and 100]]]
   if(age < 1 || age > 100){
     alert("Invalid Age: should be between 1 and 100.");
     return false;

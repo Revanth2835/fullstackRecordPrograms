@@ -8,23 +8,31 @@
 <div id="result"></div>
 
 <script>
-function factorial(n){ if(n==0) return 1; return n*factorial(n-1);
+function factorial(n){ 
+    if(n==0) return 1; return n*factorial(n-1);
 }
 function showFactorial(){
-var n = parseInt(document.getElementById("inputValue").value); document.getElementById("result").innerHTML = "Factorial: " + factorial(n);
+var n = parseInt(document.getElementById("inputValue").value); 
+document.getElementById("result").innerHTML = "Factorial: " + factorial(n);
 }
+
 function showFibonacci(){
 var n = parseInt(document.getElementById("inputValue").value);
 var a=0,b=1,series=[a,b];
-for(var i=2;i<n;i++){ series.push(a+b); a=b; b=series[i]; } document.getElementById("result").innerHTML = "Fibonacci: " + series;
+for(var i=2;i<n;i++){ series.push(a+b); a=b; b=series[i]; }
+document.getElementById("result").innerHTML = "Fibonacci: " + series;
 }
+
 function showPrime(){
 var n = parseInt(document.getElementById("inputValue").value); var prime = true;
 if(n<2) prime=false;
-for(var i=2;i<=Math.sqrt(n);i++){ if(n%i==0) prime=false; } document.getElementById("result").innerHTML = n + (prime ? " is Prime" : " is Not Prime");
+for(var i=2;i<=Math.sqrt(n);i++){ if(n%i==0) prime=false; } 
+document.getElementById("result").innerHTML = n + (prime ? " is Prime" : " is Not Prime");
 }
+
 function showPalindrome(){
-var str = document.getElementById("inputValue").value; var pal = str == str.split('').reverse().join('');
+var str = document.getElementById("inputValue").value; 
+var pal = str == str.split('').reverse().join('');
 document.getElementById("result").innerHTML = str + (pal ? " is Palindrome" : " is Not Palindrome");
 }
 </script>
